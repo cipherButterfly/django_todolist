@@ -1,0 +1,28 @@
+body{
+    background: white url("images/background.jpg") no-repeat;
+    text-align: center;
+    align-content: center;
+    align-self: center;
+    align-items: center;
+    vertical-align: middle;
+}
+#list{
+    
+    width: 18rem;
+    text-align: center;
+    color: whitesmoke;
+    margin: auto;
+    margin-top: 10%;
+}
+hr{
+    background-color: whitesmoke;
+}
+#new_input{
+    margin-bottom: 1rem;
+}
+
+#version{
+    color: black;
+    margin-top: 19%;
+    margin-left: 78%;
+}

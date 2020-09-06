@@ -1,0 +1,32 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/main_page.css' %}">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<nav>
+
+    <div class = 'navbar navbar-dark bg-dark'>
+        <div class= "nav-brand" style="color:aliceblue">{{ now }}</div>
+    </div>
+
+</nav>
+
+<div id = "list" class = "card bg-dark">
+    <div class = "card-header">To Do List</div>
+    {% if item %}
+    {% for item in item %}
+    <h5>{{ item.item_text }}</h5>
+    {% endfor %}
+    {% endif %}
+    <div class="card-footer">
+        <form action="/list/" method="POST">
+            {% csrf_token %}
+            <input type="text" name = "new_item" class=" bg-light" id = "new_input">
+            <br>
+            <input type="submit" value="Add" class="btn btn-dark">
+        </form>
+    </div>
+
+</div>
+
+<div id = "version"><h3>version : 1.0.0</h3></div>
